@@ -1,0 +1,26 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table class="table table-hover table-striped table-bordered">
+            <tr>
+                <th>Title</th>
+                <th>Category Name</th>
+                <th>Due Date</th>
+                <th>Date Completed</th>
+            </tr>
+            @foreach (Item i in Model.items)
+            {
+                <tr>
+                    <td>@i.Title</td>
+                    <td>@i.CategoryName</td>
+                    <td>@i.DueDate.ToShortDateString()</td>
+                    <td>@i.Completed.Value.ToShortDateString()</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿@model EditCategoryViewModel
+<div b-gla70z2p0w class="container">
+    <div style="height: 70vh;" class="row justify-content-center align-items-center">
+        <div class="col-md-8">
+            <form method="post" action="/home/saveeditedcategory">
+                <input type="text" class="form-control-lg form-control" value="@Model.Category.Name" name="name" />
+                <input type="hidden" value="@Model.Category.Id" name="id" />
+                <br />
+                <div class="d-grid gap-2">
+                    <button class="btn btn-danger">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
